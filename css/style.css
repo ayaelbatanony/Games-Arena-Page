@@ -72,8 +72,6 @@ a {
 .navbar {
     border-bottom: 1px solid #1e2939;
     background-color: #0b0e13;
-    z-index: 9999;
-
 }
 
 .navbar-nav .nav-link,
@@ -84,8 +82,7 @@ a {
 
 .nav-link:hover,
 .navbar-nav .nav-link.active:hover,
-.nav-link:focus,
-.navbar-nav .nav-link.active:hover {
+.nav-link:focus {
     color: var(--main-color);
 }
 
@@ -147,7 +144,6 @@ button.navbar-button {
     background-color: #0b0e13;
     right: 0;
     margin-top: 3.2rem;
-    z-index: 9999;
 }
 
 #navbarSupportedMobilestyle {
@@ -406,8 +402,8 @@ button.navbar-button {
     color: #f1f1f1;
     word-wrap: break-word;
     max-width: 100%;
+    padding-block: 100px;
 }
-
 .category:hover {
     border-color: var(--main-color);
 }
@@ -525,14 +521,9 @@ button.navbar-button {
 .player-card {
     padding: 7.5rem 2.19rem .8125rem .8125rem;
     cursor: pointer;
-    filter: grayscale(100%);
     transition: filter 0.5s;
     background-size: cover;
     background-position: center;
-}
-
-.player-card:hover {
-    filter: grayscale(0%);
 }
 
 .row>div:nth-child(1) .player-card {
@@ -577,6 +568,7 @@ button.navbar-button {
     background-color: rgba(20, 20, 20, 0.3);
     transition: transform 0.5s;
     z-index: 1;
+    backdrop-filter: grayscale(100%);
 }
 
 .player-card:hover::after {
@@ -614,13 +606,13 @@ button.navbar-button {
     padding: 2.5rem 1.875rem;
 }
 
-.info .info-icon {
-    color: #0b0e13;
-    font-size: 1.375rem;
-    padding: .75rem 1.125rem;
-    background-color: var(--main-color);
+.fa-stack i:nth-child(1){
+color: var(--main-color);
 }
+.fa-stack i:nth-child(2) {
 
+color: #0b0e13;
+}
 
 .info p {
     color: #99a1af;
